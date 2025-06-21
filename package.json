@@ -1,0 +1,20 @@
+{
+  "name": "leetcode-help-backend",
+  "version": "1.0.0",
+  "description": "Backend for leetcode-help extension",
+  "homepage": "https://github.com/bhardwajdevesh092005/leetcode-help-backend#readme",
+  "bugs": {
+    "url": "https://github.com/bhardwajdevesh092005/leetcode-help-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhardwajdevesh092005/leetcode-help-backend.git"
+  },
+  "license": "UNLICENSED",
+  "author": "Devesh Bhardwaj , Aradhya Mahajan",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
