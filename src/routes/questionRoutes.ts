@@ -1,12 +1,16 @@
 import * as express from 'express';
 
-import { getQuestionBySlug, getCodeForQuestion } from "../controllers/questionController";
-
+// import { getQuestionBySlug, getCodeForQuestion } from "../controllers/questionController";
+import { getQuestionBySlug, getCodeForQuestion } from "../controllers/questionController.ts";
 const router = express.Router();
-router.get('/:slug', (req, res, next) => {
-	getQuestionBySlug(req, res).catch(next);
-});
-router.get('/:slug/getCode',(req,res,next)=>{
+router.get('/:slug', async (req, res, next) => {
+	try {
+		await getQuestionBySlug(req, res);
+	} catch (error) {
+		next(error);
+	}
+}); 
+router.get('/:slug/getCode/:language',(req,res,next)=>{
     getCodeForQuestion(req,res).catch(next);
 });
 

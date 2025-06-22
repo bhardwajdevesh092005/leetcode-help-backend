@@ -15,8 +15,7 @@ leetcode-backend/
 │   ├── utils/
 │   │   └── llmService.ts            # (Optional) Code to call LLM, generate main()
 │   │
-│   ├── app.ts                       # Express app setup
-│   └── server.ts                    # Starts the server
+│   └── app.ts                       # Express app setup
 │
 ├── .env                             # Secrets like MONGO_URI, API keys
 ├── package.json

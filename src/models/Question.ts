@@ -13,7 +13,10 @@ const questionSchema = new mongoose.Schema({
   
   isPaidOnly: Boolean,
   
-  topicTags: [String],
+  topicTags: [{
+    name: String,
+    slug: String
+  }],
   
   content: String,
   
