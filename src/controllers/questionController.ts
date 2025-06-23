@@ -29,10 +29,23 @@ export const getCodeForQuestion = async (req: express.Request, res: express.Resp
                 return res.status(500).json({error: 'Failed to generate code.'});
             }
             console.log(resp);
+            const doc = new Code({
+                titleSlug: question.titleSlug,
+                lang: req.params.language,
+                code: resp.code,
+                input: resp.input || '',
+                command: resp.command || '',
+                testCaseCount: resp.testCaseCount || 0,
+            });
+            await doc.save();
+            console.log('Code saved to database:', doc);
             return res.status(200).json(resp);
+        }else{
+            console.log('Code already exists in database:', code);
+            res.status(200).json(code);
         }
         return res.status(200).json(code); 
-    }catch{
-
+    }catch(error){
+        return res.status(500).json({ error: 'Server error', details: error.message });
     }
 }

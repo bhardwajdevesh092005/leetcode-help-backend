@@ -42,7 +42,7 @@ Use the appropriate loop style for the given language:
 ---
 
 🔹 **3. Command**:
-- Provide a shell command to compile and run the code in ${language}
+- Provide a shell command to compile and run the code in ${language} that writes ouput directly to output.txt
 
 ---
 
